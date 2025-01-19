@@ -19,7 +19,7 @@ get_header();
             <span class="heroButtonStartFreeTrialSub"><?php echo esc_html( get_field('hero_second_title') ); ?></span>
 
         </div>
-        <div>
+        <div id="about">
             <h2 class="heroSecondTitle">Your Business Calls with <span class="heroSecondTitleHighlight">Our Call CenterSupport </span></h2>
         </div>
         <div class="customerSupportContianer">
@@ -58,7 +58,7 @@ get_header();
     </section>
 
     <!-- Business section start -->
-    <section>
+    <section id="resources">
         <div class="businessContainer">
             <div class="businessTitgle">
                 <?php echo wp_kses_post ( get_field('business_section_text') ); ?>
@@ -96,7 +96,7 @@ get_header();
 
     <!-- priceing section start -->
 
-    <section class="priceing">
+    <section class="priceing" id="pricing">
         <div>
             <h2 class="priceingTitle">Pricing <span class="priceingTitleHighlight">Plans That Work</span> For You; <br>
                 Not against You</h2>
