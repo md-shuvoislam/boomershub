@@ -7,41 +7,45 @@
 get_header();
 ?>
 
-<div>
-            <h2 class="heroTitle">Join <span class="heroTitleHighlight">Our Agency</span> For Call Outsourcing</h2>
+    <div>
+        
+        <?php echo wp_kses_post ( get_field('hero_title') ); ?>
+
         </div>
         <div class="heroButtonStartFreeTrialContainer">
-            <button class="heroButtonStartFreeTrial">Start Your Free Trial</button><br>
-            <span class="heroButtonStartFreeTrialSub">No credit card required, whatsoever!</span>
+
+            <a href="<?php echo esc_html( get_field('hero_button_link') ); ?>"><button class="heroButtonStartFreeTrial">Start Your Free Trial</button></a><br>
+
+            <span class="heroButtonStartFreeTrialSub"><?php echo esc_html( get_field('hero_second_title') ); ?></span>
+
         </div>
         <div>
-            <h2 class="heroSecondTitle">Your Business Calls with <span class="heroSecondTitleHighlight">Our Call Center
-                    Support </span></h2>
+            <h2 class="heroSecondTitle">Your Business Calls with <span class="heroSecondTitleHighlight">Our Call CenterSupport </span></h2>
         </div>
         <div class="customerSupportContianer">
             <div class="customerSupportUsers">
-                <img src="<?php echo get_template_directory_uri();?>/images/Christmas1.png" alt="">
+                <img src="<?php the_field('user_two_image'); ?>" alt="">
                 <div class="customerSupportAudioPlay">
                     <i class='bx bx-play'></i>
                     <img src="<?php echo get_template_directory_uri();?>/images/musicStatus.png" alt="">
                 </div>
             </div>
             <div class="customerSupportUsers">
-                <img src="<?php echo get_template_directory_uri();?>/images/Christmas2.png" alt="">
+                <img src="<?php the_field('user_two_image'); ?>" alt="">
                 <div class="customerSupportAudioPlay">
                     <i class='bx bx-play'></i>
                     <img src="<?php echo get_template_directory_uri();?>/images/musicStatus.png" alt="">
                 </div>
             </div>
             <div class="customerSupportUsers">
-                <img src="<?php echo get_template_directory_uri();?>/images/Christmas3.png" alt="">
+                <img src="<?php the_field('user_three_image'); ?>" alt="">
                 <div class="customerSupportAudioPlay">
                     <i class='bx bx-play'></i>
                     <img src="<?php echo get_template_directory_uri();?>/images/musicStatus.png" alt="">
                 </div>
             </div>
             <div class="customerSupportUsers">
-                <img src="<?php echo get_template_directory_uri();?>/images/Christmas4.png" alt="">
+                <img src="<?php the_field('user_four_image'); ?>" alt="">
                 <div class="customerSupportAudioPlay">
                     <i class='bx bx-play'></i>
                     <img src="<?php echo get_template_directory_uri();?>/images/musicStatus.png" alt="">
@@ -49,43 +53,32 @@ get_header();
             </div>
         </div>
         <div class="heroThardSubTitleContainer">
-            <p class="heroThardSubTitle">Free up your time while our staff ensures every call <br>
-                is taken Care of - with Ease!</p>
+            <?php echo wp_kses_post ( get_field('hero_thard_sub_title') ); ?>
         </div>
-
-
-
     </section>
 
     <!-- Business section start -->
     <section>
         <div class="businessContainer">
             <div class="businessTitgle">
-                <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
-                <h2>Give Your <span class="businessTitgleHighlight">Business the Edge</span> <br> With us</h2>
+                <?php echo wp_kses_post ( get_field('business_section_text') ); ?>
             </div>
             <div class="businessIdea">
                 <div class="businessIdeaCard">
                     <img src="<?php echo get_template_directory_uri();?>/images/icons8_idea.png" alt="">
-                    <h3 class="businessIdeaCardTitle">Stay Efficient During Peak Hours</h3>
-                    <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                    </p>
+                    <?php echo wp_kses_post ( get_field('card_one_text') ); ?>
                 </div>
                 <div class="businessIdeaCard">
                     <img src="<?php echo get_template_directory_uri();?>/images/icons8_idea.png" alt="">
-                    <h3 class="businessIdeaCardTitle">Stay Efficient During Peak Hours</h3>
-                    <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                    </p>
+                    <?php echo wp_kses_post ( get_field('card_two_text') ); ?>
                 </div>
                 <div class="businessIdeaCard">
                     <img src="<?php echo get_template_directory_uri();?>/images/icons8_idea.png" alt="">
-                    <h3 class="businessIdeaCardTitle">Stay Efficient During Peak Hours</h3>
-                    <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                    </p>
+                    <?php echo wp_kses_post ( get_field('card_three_text') ); ?>
                 </div>
             </div>
             <div class="custommerSingleSupportUserContainer">
-                <img class="custommerSingleSupportUser" src="<?php echo get_template_directory_uri();?>/images/custommerSupportUser.png" alt="">
+                <img class="custommerSingleSupportUser" src="<?php the_field('business_image'); ?>" alt="">
             </div>
         </div>
     </section>
@@ -94,9 +87,10 @@ get_header();
 
     <section class="creditCards">
         <div class="creditCardsContainer">
-            <h3>No hidden fees <br> Cancel anytime <br> Risk-free trial included</h3>
-            <p>We Don’t Require Credit Cards For A Free Trial</p>
-            <button class="creditCardsButton">Sign Up for Free</button>
+            <?php echo wp_kses_post ( get_field('cta_text') ); ?>
+            
+            <a href="<?php echo esc_html( get_field('cta_button_link') ); ?>"><button class="creditCardsButton">Sign Up for Free</button></a>
+
         </div>
     </section>
 
@@ -115,70 +109,44 @@ get_header();
             </div>
 
         </div>
+
+        <?php
+
+        // Check rows exists.
+        if( have_rows('month_content') ): ?>
+
         <div class="priceingCardsAll">
-            <div class="priceingCard">
-                <h3>Essential</h3>
-                <ul>
-                    <li class="activeItem">✔ Neque porro quisquam </li>
-                    <li>✔ Neque porro quisquam est qui </li>
-                    <li>✔ Neque porro quisquam </li>
-                    <li>✔ More Copy</li>
-                    <li>✔ More copy</li>
-                </ul>
-                <div class="price">
-                    <h4>$88 <span>/month</span></h4>
-                </div>
-                <button class="selectPlan">Select Plan</button>
-            </div>
+
+        <?php while( have_rows('month_content') ) : the_row(); ?>
 
             <div class="priceingCard">
-                <h3>Time Saver</h3>
-                <ul>
-                    <li class="activeItem">✔ Neque porro quisquam </li>
-                    <li class="activeItem">✔ Neque porro quisquam est qui </li>
-                    <li>✔ Neque porro quisquam </li>
-                    <li>✔ More Copy</li>
-                    <li>✔ More copy</li>
-                </ul>
+
+                <h3> <?php echo $pricing_title = get_sub_field('pricing_title'); ?> </h3>
+
+                <?php echo $pricing_content = get_sub_field('pricing_content'); ?>
+
                 <div class="price">
-                    <h4>$124 <span>/month</span></h4>
+
+                    <?php echo $price = get_sub_field('price'); ?>
+
                 </div>
-                <button class="selectPlan">Select Plan</button>
+
+                <a href="<?php echo $pricing_button_link = get_sub_field('pricing_button_link'); ?>"><button class="selectPlan">Select Plan</button></a>
+
             </div>
 
-            <div class="priceingCard">
-                <h3>Efficiency Plus</h3>
-                <ul>
-                    <li class="activeItem">✔ Neque porro quisquam </li>
-                    <li class="activeItem">✔ Neque porro quisquam est qui </li>
-                    <li class="activeItem">✔ Neque porro quisquam </li>
-                    <li class="activeItem">✔ More Copy</li>
-                    <li>✔ More copy</li>
-                </ul>
-                <div class="price">
-                    <h4>$865 <span>/month</span></h4>
-                </div>
-                <button class="selectPlan">Select Plan</button>
-            </div>
-
-            <div class="priceingCard">
-                <h3>Enterprise Edge</h3>
-                <ul>
-                    <li class="activeItem">✔ Neque porro quisquam </li>
-                    <li class="activeItem">✔ Neque porro quisquam est qui </li>
-                    <li class="activeItem">✔ Neque porro quisquam </li>
-                    <li class="activeItem">✔ More Copy</li>
-                    <li class="activeItem">✔ More copy</li>
-                </ul>
-                <div class="price">
-                    <h4>Custom Pricing <span>/month</span></h4>
-                </div>
-                <button class="selectPlan contactUs">Contact Us</button>
-            </div>
+        <?php endwhile; ?>
+            
         </div>
+        
+        <?php
+        // No value.
+        else :
+        // Do something...
+        endif;
+
+        ?>
 
     </section>
 
-    <?php
-get_footer();
-?>
+<?php get_footer(); ?>
