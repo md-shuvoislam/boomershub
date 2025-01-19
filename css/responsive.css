@@ -1,0 +1,371 @@
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbarContainer {
+        width: 90%;
+    }
+
+    .navbarContainer .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .navLogo img {
+        width: 80px;
+    }
+
+    .navBarButtonLogin,
+    .navBarButtonGetStart {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .navBarButtonLogin {
+        margin-bottom: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+}
+
+/* Very small screen responsiveness */
+@media (max-width: 480px) {
+    .navbarContainer {
+        width: 95%;
+    }
+
+    .navbarContainer .navbar {
+        padding: 10px 0;
+    }
+
+    .navBarButtonLogin {
+        font-size: 14px;
+    }
+
+    .navBarButtonGetStart {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+}
+
+
+/* hero section responsiveness */
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    .heroTitle,
+    .heroSecondTitle {
+        font-size: 36px;
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .heroButtonStartFreeTrialContainer {
+        width: 80%;
+    }
+
+    .heroButtonStartFreeTrial {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .customerSupportContianer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .customerSupportAudioPlay {
+        bottom: -20px;
+        left: 20%;
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .heroThardSubTitleContainer {
+        width: 80%;
+    }
+}
+
+/* Very Small Screen Responsiveness */
+@media (max-width: 480px) {
+
+    .heroTitle,
+    .heroSecondTitle {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    .heroButtonStartFreeTrialContainer {
+        width: 90%;
+    }
+
+    .heroButtonStartFreeTrial {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .customerSupportContianer {
+        grid-template-columns: 1fr;
+    }
+
+    .customerSupportAudioPlay {
+        font-size: 18px;
+        width: 70%;
+        bottom: -25px;
+    }
+
+    .heroThardSubTitleContainer {
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+/* buissness section responsiveness */
+
+/* Business Section Responsive */
+@media (max-width: 768px) {
+    .businessContainer {
+        width: 90%;
+    }
+
+    .businessTitgle {
+        width: 90%;
+        font-size: 18px;
+        margin: 50px auto;
+    }
+
+    .businessTitgle h2 {
+        font-size: 35px;
+    }
+
+    .businessIdea {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 30px auto;
+    }
+
+    .businessIdeaCard {
+        padding: 15px;
+    }
+
+    .businessIdeaCardTitle {
+        font-size: 25px;
+    }
+
+    .custommerSingleSupportUserContainer {
+        width: 80%;
+    }
+
+    .custommerSingleSupportUser {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .businessTitgle {
+        width: 95%;
+        font-size: 16px;
+        margin: 30px auto;
+    }
+
+    .businessTitgle h2 {
+        font-size: 30px;
+    }
+
+    .businessIdea {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .businessIdeaCard {
+        padding: 10px;
+    }
+
+    .businessIdeaCardTitle {
+        font-size: 20px;
+    }
+
+    .custommerSingleSupportUserContainer {
+        width: 100%;
+    }
+
+    .custommerSingleSupportUser {
+        width: 100%;
+    }
+}
+
+
+/* cradit card responsiveness */
+
+/* Credit Cards Signup section Responsive */
+@media (max-width: 768px) {
+    .creditCardsContainer {
+        width: 80%;
+        padding: 80px 0;
+    }
+
+    .creditCardsContainer h3 {
+        font-size: 22px;
+    }
+
+    .creditCardsContainer p {
+        font-size: 16px;
+    }
+
+    .creditCardsButton {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .creditCardsContainer {
+        width: 90%;
+        padding: 60px 0;
+    }
+
+    .creditCardsContainer h3 {
+        font-size: 18px;
+    }
+
+    .creditCardsContainer p {
+        font-size: 14px;
+        margin: 20px auto;
+    }
+
+    .creditCardsButton {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+
+/* priceing card responsive */
+
+/*================ Pricing Section Responsive =================*/
+
+/* For tablets and smaller screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .priceing {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .priceingTitle {
+        font-size: 35px;
+    }
+
+    .pricingToggle {
+        gap: 15px;
+    }
+
+    .priceingCardsAll {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceingCard {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .priceing {
+        width: 95%;
+    }
+
+    .priceingTitle {
+        font-size: 28px;
+    }
+
+    .pricingToggle {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toggleSwitch {
+        width: 40px;
+        height: 20px;
+    }
+
+    .toggleCircle {
+        width: 18px;
+        height: 18px;
+    }
+
+    .priceingCardsAll {
+        padding: 0;
+    }
+
+    .priceingCard {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .priceingCard h3 {
+        font-size: 16px;
+    }
+
+    .priceingCard ul li {
+        font-size: 12px;
+    }
+
+    .price h4 {
+        font-size: 20px;
+    }
+
+    .selectPlan {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+/* For small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .priceingTitle {
+        font-size: 22px;
+    }
+
+    .pricingToggle {
+        font-size: 14px;
+    }
+
+    .priceingCard {
+        padding: 15px;
+    }
+
+    .priceingCard h3 {
+        font-size: 14px;
+    }
+
+    .priceingCard ul li {
+        font-size: 11px;
+    }
+
+    .price h4 {
+        font-size: 18px;
+    }
+
+    .selectPlan {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+}

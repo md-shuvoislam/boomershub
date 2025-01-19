@@ -11,24 +11,18 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'boomershub' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'boomershub' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'boomershub' ), 'boomershub', '<a href="https://devshuvo.xyz">Md Shuvo Islam</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<script>
+        document.querySelector(".toggleSwitch").addEventListener("click", function () {
+            const toggle = document.querySelector(".toggleSwitch");
+            const options = document.querySelectorAll(".toggleOption");
+
+            toggle.classList.toggle("active");
+            options.forEach(option => option.classList.toggle("active"));
+        });
+    </script>
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

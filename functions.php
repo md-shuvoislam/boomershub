@@ -138,10 +138,15 @@ add_action( 'widgets_init', 'boomershub_widgets_init' );
  * Enqueue scripts and styles.
  */
 function boomershub_scripts() {
+
+	wp_enqueue_style( 'boomershub-boxicons', 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' );
+	wp_enqueue_style( 'boomershub-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' );
+	wp_enqueue_style( 'boomershub-responsive', get_template_directory_uri() . '/css/responsive.css', array(), _S_VERSION );
 	wp_enqueue_style( 'boomershub-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'boomershub-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'boomershub-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'boomershub-bootstrapjs', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
