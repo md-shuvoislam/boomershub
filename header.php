@@ -73,8 +73,9 @@
 
                 <!-- Right Section -->
                 <div class="align-items-center gap-2 d-none d-md-flex">
-                    <a style="width: 100px;" class="nav-link text-white fw-bold d-block" href="#login">Log In</a>
-                    <button class="navBarButtonGetStart">Get Started — It’s Free</button>
+                    <a style="width: 100px;" class="nav-link text-white fw-bold d-block" href="<?php the_field('header_login_link', 'option'); ?>">Log In</a>
+
+                    <a href="<?php the_field('header_button_link', 'option'); ?>"><button class="navBarButtonGetStart"><?php the_field('header_button_text', 'option'); ?></button></a>
                 </div>
             </div>
         </nav>
